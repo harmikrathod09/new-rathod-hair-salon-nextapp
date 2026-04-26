@@ -39,7 +39,7 @@ export default function Navbar() {
             <Scissors className="w-6 h-6 text-white" />
           </div>
           <span className="text-xl font-bold tracking-tighter text-white">
-            NEW RATHOD <span className="text-accent italic font-light ml-1">SALON</span>
+            NEW RATHOD <span className="text-accent italic font-light ml-1">HAIR SALON</span>
           </span>
         </Link>
 
