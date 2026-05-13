@@ -40,7 +40,7 @@ export default function Pricing() {
     <section id="pricing" className="py-24 px-6 bg-luxury-texture border-y border-white/5">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -48,7 +48,7 @@ export default function Pricing() {
           >
             Fair Pricing
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function Pricing() {
               <h4 className="text-xl font-bold text-accent border-b border-white/10 pb-4 mb-6">
                 {category.title}
               </h4>
-              
+
               <ul className="space-y-6">
                 {category.items.map((item) => (
                   <li key={item.name} className="flex justify-between items-end group cursor-default">

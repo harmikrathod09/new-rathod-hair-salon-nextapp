@@ -1,10 +1,17 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import HeroScene from "./HeroScene";
 import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* 3D Antigravity Background */}
@@ -13,8 +20,8 @@ export default function Hero() {
       {/* Atmospheric Fog Overlay */}
       <div className="absolute inset-0 z-[1] pointer-events-none opacity-40">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-black" />
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             opacity: [0.2, 0.4, 0.2],
             scale: [1, 1.1, 1],
           }}
@@ -34,13 +41,18 @@ export default function Hero() {
             Premium Grooming For Men
           </span>
           <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter">
-            NEW RATHOD <br />
-            <span className="text-gradient-gold">HAIR SALON</span>
+            <span className="glitch-text" data-text="NEW RATHOD">NEW RATHOD</span> <br />
+            <span className="text-gradient-gold glitch-text" data-text="HAIR SALON">HAIR SALON</span>
           </h1>
-          <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light italic">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light italic"
+          >
             "Where Gentlemen Get Distinguished Style"
-          </p>
-          
+          </motion.p>
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -53,12 +65,12 @@ export default function Hero() {
 
       {/* Decorative Particles (Simulated with div) */}
       <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {mounted && [...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-accent/20 rounded-full"
-            initial={{ 
-              x: Math.random() * 100 + "%", 
+            initial={{
+              x: Math.random() * 100 + "%",
               y: Math.random() * 100 + "%",
               opacity: Math.random()
             }}

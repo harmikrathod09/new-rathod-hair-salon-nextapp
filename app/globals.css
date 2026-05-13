@@ -17,7 +17,7 @@
   --color-primary: var(--primary);
   --color-accent: var(--accent);
   --color-glass: var(--glass);
-  
+
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-serif: 'Playfair Display', serif;
 }
@@ -80,15 +80,13 @@ body {
 }
 
 .barber-pole-accent {
-  background: repeating-linear-gradient(
-    45deg,
-    #8b0000,
-    #8b0000 10px,
-    #ffffff 10px,
-    #ffffff 20px,
-    #050505 20px,
-    #050505 30px
-  );
+  background: repeating-linear-gradient(45deg,
+      #8b0000,
+      #8b0000 10px,
+      #ffffff 10px,
+      #ffffff 20px,
+      #050505 20px,
+      #050505 30px);
   opacity: 0.1;
 }
 

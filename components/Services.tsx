@@ -62,10 +62,10 @@ export default function Services() {
     <section id="services" className="py-24 px-6 bg-luxury-texture relative overflow-hidden">
       {/* Subtle Barber Pole Accent */}
       <div className="absolute top-0 right-0 w-32 h-full barber-pole-accent -skew-x-12 translate-x-16" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -73,7 +73,7 @@ export default function Services() {
           >
             Our Expertise
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -92,11 +92,11 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ 
-                scale: 1.02, 
+              whileHover={{
+                scale: 1.02,
                 rotateY: 5,
                 rotateX: -5,
-                transition: { duration: 0.2 } 
+                transition: { duration: 0.2 }
               }}
               className="glass-morphism p-8 rounded-2xl relative overflow-hidden group cursor-default"
             >
@@ -105,14 +105,14 @@ export default function Services() {
                   {service.badge}
                 </div>
               )}
-              
+
               <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <service.icon className={`w-7 h-7 ${service.iconColor}`} />
               </div>
 
               <h4 className="text-2xl font-bold text-white mb-2">{service.title}</h4>
               <p className="text-white/50 mb-6 line-clamp-2">{service.description}</p>
-              
+
               <div className="flex items-center justify-between mt-auto">
                 <span className="text-2xl font-black text-accent">{service.price}</span>
                 <button className="flex items-center gap-2 text-white/40 group-hover:text-white text-sm font-bold uppercase tracking-wider transition-all">
